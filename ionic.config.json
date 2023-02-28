@@ -1,0 +1,7 @@
+{
+  "name": "Quizzy-App",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
