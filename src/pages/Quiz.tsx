@@ -14,6 +14,7 @@ import {
   IonButtons,
   IonBackButton,
 } from "@ionic/react";
+import "./Quiz.css";
 
 const Quiz: React.FC = () => {
   const questions = [
@@ -89,16 +90,17 @@ const Quiz: React.FC = () => {
   };
 
   return (
+    <>
     <IonPage>
       <IonHeader>
         <IonToolbar>
           <IonButtons slot="start">
             <IonBackButton></IonBackButton>
           </IonButtons>
-          <IonTitle color="danger">JS Quiz</IonTitle>
+          <IonTitle className="ion-text-center" color="warning">JS Quizzo</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent color="tertiary">
+      <IonContent className="container"color="tertiary">
         <IonList>
           <IonItem>
             <IonLabel>{questions[currentQuestion].question}</IonLabel>
@@ -117,17 +119,18 @@ const Quiz: React.FC = () => {
             ))}
           </IonRadioGroup>
         </IonList>
-        <IonButton color="success"
+        <IonButton className="button-small" color="success"
           expand="block"
           onClick={() => {
             setCurrentQuestion(0);
             setScore(0);
           }}
         >
-          Restart Quiz
+          Restart Quizzo
         </IonButton>
       </IonContent>
     </IonPage>
+    </>
   );
 };
 
